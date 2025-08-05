@@ -4,7 +4,7 @@ A Django REST API for buying and selling gold with user authentication and trans
 
 ## Features
 
-- **User Authentication**: Register, login, logout, password reset
+- **User Authentication**: Register, login, logout, password reset 
 - **Gold Trading**: Buy and sell gold with simulated pricing
 - **Balance Management**: Track cash and gold balances
 - **Transaction History**: View all trading transactions
