@@ -31,7 +31,15 @@ def sell_gold(request):
     amount = data.get('amount')
     # Missing: No verification if authenticated user owns this account
     return process_gold_sale(user_id, amount)
-
+    
+@csrf_exempt
+@require_http_methods(["POST"])
+def sell_gold(request):
+    data = json.loads(request.body)
+    user_id = data.get('user_id')
+    amount = data.get('amount')
+    # Missing: No verification if authenticated user owns this account
+    return process_gold_sale(user_id, amount)
 
 def process_gold_sale(user_id, amount):
     return JsonResponse({"message": f"Gold sale for user {user_id} processed: {amount}g"})
